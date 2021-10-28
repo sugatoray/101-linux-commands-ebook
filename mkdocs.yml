@@ -96,10 +96,6 @@ plugins:
   # macros must be placed after plugin: git-revision-date
   - macros:
       include_dir: docs/assets/snippets # snippets
-      # j2_block_start_string: '{{%'
-      # j2_block_end_string: '%}}'
-      # j2_variable_start_string: '{{'
-      # j2_variable_end_string: '}}'
   - markdownextradata:
       data: data
   - minify:
@@ -463,6 +459,10 @@ extra_javascript:
   - "<code>125:&nbsp;<strong>aplay</strong></code>": "ebook/en/content/125-the-aplay-command.md"
   - "<code>126:&nbsp;<strong>spd</strong>&nbsp;and&nbsp;<strong>say</strong></code>": "ebook/en/content/126-the-spd-say-command.md"
   - "Wrap Up": "ebook/en/content/999-wrap-up.md"
+
+- "<p><i class='fas fa-download'>&nbsp;</i>Download</p>":
+  - "download.md"
+
 - "<p><i class='fas fa-info-circle'>&nbsp;</i>About</p>":
   - "Info": "about/index.md"
   - "License": "about/license.md"
