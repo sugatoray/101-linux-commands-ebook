@@ -7,20 +7,20 @@ site_description: |
   No matter if you are a DevOps/SysOps engineer, developer, or just a Linux
   enthusiast, you will most likely have to use the terminal at some point in
   your career.
-site_url: https://sugatoray.github.io/101-linux-commands-ebook
-site_author: Sugato Ray
+site_url: https://bobbyiliev.github.io/101-linux-commands-ebook
+site_author: Bobby Iliev
 
 ### Repository
-repo_name: sugatoray/101-linux-commands-ebook
-repo_url: https://github.com/sugatoray/101-linux-commands-ebook
+repo_name: bobbyiliev/101-linux-commands-ebook
+repo_url: https://github.com/bobbyiliev/101-linux-commands-ebook
 edit_uri: '' # comment this out to disable allowing editing of the docs from the website.
 remote_branch: gh-pages
 remote_name: origin
 
 ### Copyright
-#copyright: Copyright &copy; 2021 Sugato Ray
+#copyright: Copyright &copy; 2021 Bobby Iliev
 #copyright: |
-#  Copyright &copy; 2021 <a href="https://github.com/sugatoray"  target="_blank" rel="noopener">Sugato Ray</a>
+#  Copyright &copy; 2021 <a href="https://github.com/bobbyiliev"  target="_blank" rel="noopener">Bobby Iliev</a>
 
 ### Preview Controls
 use_directory_urls: true
@@ -210,7 +210,7 @@ markdown_extensions:
       repo_url_shorthand: true #
       social_url_shorthand: true
       social_url_shortener: true
-      user: sugatoray #
+      user: bobbyiliev #
       repo: 101-linux-commands-ebook #
       normalize_issue_symbols: true
   - pymdownx.mark:
@@ -259,26 +259,26 @@ extra:
   #   default: latest
   #   provider: mike
   # disqus: sugatoray
-  social:
-  #- icon: fontawesome/brands/github-square
-  #- icon: fontawesome/brands/github-alt
-  - icon: fontawesome/brands/github
-    link: https://github.com/sugatoray
+  # social:
+  # - icon: fontawesome/brands/github-square
+  # - icon: fontawesome/brands/github-alt
+  # - icon: fontawesome/brands/github
+  #   link: https://github.com/sugatoray
   # - icon: simpleicons.org/icons/stackoverflow
-  - icon: fontawesome/brands/stack-overflow
-    link: https://stackoverflow.com/users/8474894/cypherx
-  #- icon: fontawesome/brands/stackoverflow
-  #  link: https://discord.gg/VQjSZaeJmf
-  - icon: fontawesome/brands/twitter
-    link: https://twitter.com/sugatoray
-  - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/in/sugatoray
-  - icon: fontawesome/brands/dev
-    link: https://dev.to/sugatoray
-  - icon: fontawesome/brands/medium
-    link: https://medium.com/@sugatoray
-  #- icon: fontawesome/solid/globe
-  #  link: https://www.sugatoray.com
+  # - icon: fontawesome/brands/stack-overflow
+  #   link: https://stackoverflow.com/users/8474894/cypherx
+  # - icon: fontawesome/brands/stackoverflow
+  #   link: https://discord.gg/VQjSZaeJmf
+  # - icon: fontawesome/brands/twitter
+  #   link: https://twitter.com/sugatoray
+  # - icon: fontawesome/brands/linkedin
+  #   link: https://www.linkedin.com/in/sugatoray
+  # - icon: fontawesome/brands/dev
+  #   link: https://dev.to/sugatoray
+  # - icon: fontawesome/brands/medium
+  #   link: https://medium.com/@sugatoray
+  # - icon: fontawesome/solid/globe
+  #   link: https://www.sugatoray.com
   alternate:
   - link: /
     name: en - English
