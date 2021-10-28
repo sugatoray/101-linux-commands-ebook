@@ -3,7 +3,7 @@ on:
   push:
     branches:
       #- master
-      #- main
+      - main
       - docs_with_mkdocs
 
 env:
