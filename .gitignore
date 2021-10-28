@@ -1,6 +1,7 @@
 ## USER ADDED
 .env.secret
 .vscode/
+docs/ebook
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
