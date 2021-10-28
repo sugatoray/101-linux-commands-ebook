@@ -258,27 +258,6 @@ extra:
   # version:
   #   default: latest
   #   provider: mike
-  # disqus: sugatoray
-  # social:
-  # - icon: fontawesome/brands/github-square
-  # - icon: fontawesome/brands/github-alt
-  # - icon: fontawesome/brands/github
-  #   link: https://github.com/sugatoray
-  # - icon: simpleicons.org/icons/stackoverflow
-  # - icon: fontawesome/brands/stack-overflow
-  #   link: https://stackoverflow.com/users/8474894/cypherx
-  # - icon: fontawesome/brands/stackoverflow
-  #   link: https://discord.gg/VQjSZaeJmf
-  # - icon: fontawesome/brands/twitter
-  #   link: https://twitter.com/sugatoray
-  # - icon: fontawesome/brands/linkedin
-  #   link: https://www.linkedin.com/in/sugatoray
-  # - icon: fontawesome/brands/dev
-  #   link: https://dev.to/sugatoray
-  # - icon: fontawesome/brands/medium
-  #   link: https://medium.com/@sugatoray
-  # - icon: fontawesome/solid/globe
-  #   link: https://www.sugatoray.com
   alternate:
   - link: /
     name: en - English
