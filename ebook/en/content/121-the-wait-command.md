@@ -8,7 +8,7 @@ This example shows how the `wait`  command works : <br />
 
 **Step-1**:
 
-Create a file named "wait_example.sh" and add the following scripit to it.
+Create a file named "wait_example.sh" and add the following script to it.
 
 ```
 #!/bin/bash
