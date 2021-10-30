@@ -1,7 +1,6 @@
 # The `Wait` commands
 
-
-It is a command that waits for completing any runnung process of given id. if the process id is not given then it waits for all current child processes to complete.
+It is a command that waits for completing any running process of given id. if the process id is not given then it waits for all current child processes to complete.
 
 ## Example
 
