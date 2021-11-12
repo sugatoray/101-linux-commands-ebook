@@ -787,17 +787,19 @@ Feel free to add new topics in case that you don't find one that you like from t
 - [113-the-alias-command.md](ebook/en/content/113-the-alias-command.md)
 - [114-the-which-command.md](ebook/en/content/114-the-which-command.md)
 - [115-the-date-command.md](ebook/en/content/115-the-date-command.md)
-- [116-mount-command.md](ebook/en/content/116-mount-command.md)
-- [117-nice-command.md](ebook/en/content/117-nice-command.md)
+- [116-the-mount-command.md](ebook/en/content/116-the-mount-command.md)
+- [117-the-nice-command.md](ebook/en/content/117-the-nice-command.md)
 - [118-the-wc-command.md](ebook/en/content/118-the-wc-command.md)
 - [119-the-tr-command.md](ebook/en/content/119-the-tr-command.md)
-- [120-fdisk-command.md](ebook/en/content/120-fdisk-command.md)
-- [121-wait-command.md](ebook/en/content/121-wait-command.md)
+- [120-the-fdisk-command.md](ebook/en/content/120-the-fdisk-command.md)
+- [121-the-wait-command.md](ebook/en/content/121-the-wait-command.md)
 - [122-the-zcat-command.md](ebook/en/content/122-the-zcat-command.md)
 - [123-the-fold-command.md](ebook/en/content/123-the-fold-command.md)
 - [124-the-quota-command.md](ebook/en/content/124-the-quota-command.md)
 - [125-the-aplay-command.md](ebook/en/content/125-the-aplay-command.md)
 - [126-the-spd-say-command.md](ebook/en/content/126-the-spd-say-command.md)
+- [127-the-xeyes-command.md](ebook/en/content/127-the-xeyes-command.md)
+- [128-the-parted-command.md](ebook/en/content/128-the-parted-command.md)
 
 # 🔗Links
 
