@@ -15,7 +15,7 @@ NAV_PATTERN = "<code>{command_id}:&nbsp;{slug}</code>"
 
 SlugmapType = NewType("SlugmapType", Dict[str, Dict[str, str]])
 CommandNavsType = NewType("CommandNavsType", List[Dict[str, str]])
-NavsDataType = NewType("NavsDataType", Dict[str, List[Dict[str, List[str, str]]]])
+NavsDataType = NewType("NavsDataType", Dict[str, List[Union[str, Dict[str, Union[str, List[Union[str, Dict]]]]]]])
 
 # docs_dir = "../docs"
 # files = glob(f'{docs_dir}/ebook/en/content/*.md')
@@ -54,7 +54,7 @@ def get_navs_skeleton(
 
             command_navs.append({NAV_PATTERN.format(slug=slug, command_id=command_id): path})
 
-    return slugmap, command_navs 
+    return slugmap, command_navs
 
 def create_navs_data(command_navs: CommandNavsType, **kwargs) -> NavsDataType:
 
