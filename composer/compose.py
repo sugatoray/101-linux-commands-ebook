@@ -1,11 +1,10 @@
-import os
-import sys
-from glob import glob
-# from parse import parse # not using anymore (keeping for temp-ref
-import json
-import re
-import yaml
 import argparse
+import json
+import os
+import re
+import sys
+import yaml
+from glob import glob
 from typing import List, Tuple, Dict, Union, Any, Optional, Callable, NewType
 
 PAT = re.compile(".*(?P<command_id>\d{3})-(?:the-)?(?P<slug>.*)-command.md")
@@ -16,11 +15,6 @@ NAV_PATTERN = "<code>{command_id}:&nbsp;{slug}</code>"
 SlugmapType = NewType("SlugmapType", Dict[str, Dict[str, str]])
 CommandNavsType = NewType("CommandNavsType", List[Dict[str, str]])
 NavsDataType = NewType("NavsDataType", Dict[str, List[Union[str, Dict[str, Union[str, List[Union[str, Dict]]]]]]])
-
-# docs_dir = "../docs"
-# files = glob(f'{docs_dir}/ebook/en/content/*.md')
-# files.sort()
-#print(files)
 
 def get_navs_skeleton(
         files: List[str], 
@@ -57,19 +51,24 @@ def get_navs_skeleton(
     return slugmap, command_navs
 
 def create_navs_data(command_navs: CommandNavsType, **kwargs) -> NavsDataType:
+    """Create the navigational structure for mkdocs.yml as a dict."""
 
     navs_data = {
         "nav": [
+            # Section: Home
             {"<p><i class='fas fa-home'>&nbsp;</i> Home</p>": "index.md"},
+            # Section: Commands
             {
                 "<p><i class='fas fa-terminal'>&nbsp;</i>Commands</p>": command_navs +
                     [{"Wrap Up": "ebook/en/content/999-wrap-up.md"}],
             },
+            # Section: Download
             {
                 "<p><i class='fas fa-download'>&nbsp;</i>Download</p>": [
                     {"Download eBook": "download.md"},
                 ],
             },
+            # Section: About
             {
                 "<p><i class='fas fa-info-circle'>&nbsp;</i>About</p>": [
                     {"Info": "about/index.md"},
@@ -110,7 +109,7 @@ def generate_nav(
         **kwargs
     )
 
-    # Write slugmap to a persistent file: 'slugmap.json'
+    # Write slugmap to a persistent file: 'composer/slugmap.json'
     if create_slugmap:
         with open(f'{docs_dir}/{slugmap_filename}', 'w') as f:
             f.write(json.dumps(slugmap, indent=2))
@@ -127,7 +126,7 @@ def generate_nav(
             indent=2,
         )
     else:
-        # Write to file: 'command_navs.yml'
+        # Write to file: 'composer/command_navs.yml'
         with open(f'{docs_dir}/{command_navs_filename}', 'w') as f:
             yaml.dump(navs_data, f,
                 default_flow_style=False,
@@ -135,7 +134,29 @@ def generate_nav(
                 indent=2,
             )
 
-if __name__ == "__main__":
+def load_config(config_filename: str="config.yml"):
+    """Loads in the nav-generation configuration from config 
+    yaml-file and return a dict.
+    """
+    cf = f'{docs_dir}/{config_filename}'
+    config = {}
+    if os.path.isfile(cf):
+        with open(cf, 'w') as f:
+            config = yaml.safe_load(f)
+    return config
 
+if __name__ == "__main__":
+    # NOTE: This file must be run from 
+    #       within the 'composer/' directory.
+    
+    # Load configurations from: 'composer/config.yml' 
+    config = load_config(config_filename="config.yml")
+
+    # TODO: construct the parser object to collect user specified params
     parser = argparse.ArgumentParser(description='Dynamically generate navigation for documentation.')
-    generate_nav()
+    
+    # Generate nav for mkdocs.yml
+    if config:
+        generate_nav(**config.get("generate_nav", {}))
+    else:
+        generate_nav()
