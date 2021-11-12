@@ -141,7 +141,7 @@ def load_config(config_file: str="config.yml"):
     cf = f'{config_file}'
     config = {}
     if os.path.isfile(cf):
-        with open(cf, 'w') as f:
+        with open(cf, 'r') as f:
             config = yaml.safe_load(f)
     return config
 

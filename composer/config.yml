@@ -1,5 +1,5 @@
 generate_nav:
-  docs_dir: ""../docs"
+  docs_dir: "../docs"
   dry_run: False
   create_slugmap: True
   ebook_pattern: "ebook/en/content/*.md"
