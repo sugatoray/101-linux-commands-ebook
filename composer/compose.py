@@ -134,11 +134,11 @@ def generate_nav(
                 indent=2,
             )
 
-def load_config(config_filename: str="config.yml"):
+def load_config(config_file: str="config.yml"):
     """Loads in the nav-generation configuration from config 
     yaml-file and return a dict.
     """
-    cf = f'{docs_dir}/{config_filename}'
+    cf = f'{config_file}'
     config = {}
     if os.path.isfile(cf):
         with open(cf, 'w') as f:
@@ -150,7 +150,7 @@ if __name__ == "__main__":
     #       within the 'composer/' directory.
     
     # Load configurations from: 'composer/config.yml' 
-    config = load_config(config_filename="config.yml")
+    config = load_config(config_file="config.yml")
 
     # TODO: construct the parser object to collect user specified params
     parser = argparse.ArgumentParser(description='Dynamically generate navigation for documentation.')
