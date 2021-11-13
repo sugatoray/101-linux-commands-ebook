@@ -266,15 +266,10 @@ def drop_empty_keys(d: Dict) -> Dict:
             d.pop(k)
     return d
 
-if __name__ == "__main__":
-    # NOTE: This file must be run from
-    #       within the 'composer/' directory.
 
-    # The parser object collects user specified params
-    # NOTE: Priority is as follows (lowest-left TO highest-right).
-    # default-args << config.yml args << commandline arg specifications
+def main():
     args, defaultargs = argparser()
-    print(json.dumps(vars(args), indent=2))
+    print(f'parsed args: {json.dumps(vars(args), indent=2)}')
 
     # Load configurations from: 'composer/config.yml'
     config = load_config(config_file=args.config)
@@ -289,3 +284,13 @@ if __name__ == "__main__":
         generate_nav(**conf)
     else:
         generate_nav(**delta_config)
+
+if __name__ == "__main__":
+    # NOTE: This file must be run from
+    #       within the 'composer/' directory.
+
+    # The parser object collects user specified params
+    # NOTE: Priority is as follows (lowest-left TO highest-right).
+    # default-args << config.yml args << commandline arg specifications
+
+    main()
